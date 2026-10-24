@@ -1,0 +1,17 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.englishwritinglab.app'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.englishwritinglab.app'
+        minSdk 24
+        targetSdk 28
+        versionCode 1
+        versionName '2.5.0'
+    }
+    buildTypes { release { minifyEnabled false } }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
