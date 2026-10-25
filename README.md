@@ -1,25 +1,22 @@
-# English Writing Lab — Android Edition
+# English Writing Lab 3.2 — Writing Library Edition
 
-Android WebView app with bundled offline English lessons, TTS and learning buddy.
+## What's included
+- 321 curated vocabulary cards across 9 everyday and workplace contexts.
+- 105 authored Normal → Natural → Professional sentence ladders across 7 themes.
+- Writing-first lesson flow, AI coach backend configuration (backend not included/deployed), offline basic checks.
+- Saved vocabulary and sentence examples, search, categories, listening, and Writing Studio handoff.
+- All content bundled locally in library.js for offline reading; pronunciation depends on installed Android voice engine.
 
-## Push to GitHub (repository: Makrufkasr/test_app)
+## Web
+Serve this directory using `python -m http.server 8000` and open http://localhost:8000.
 
-Extract the **contents of this ZIP** directly into the local `test_app` repository, so `settings.gradle`, `app/` and `.github/` are at the repository root.
+## Android
+The Android project contains the same updated web assets and launcher icon. Build with GitHub Actions or Android Studio. **No APK is included.**
 
-```bash
-git add .
-git commit -m "Add English Writing Lab Android app"
-git push origin main
-```
+## AI
+AI correction needs your separately deployed HTTPS backend and API provider; the browser/APK must never contain provider secrets. Offline review is heuristic and not a replacement for AI correction.
 
-## Download APK
+## Quality
+Library entries authored for real situations; Normal → Pro examples are **contextual alternatives**, not automatically interchangeable claims. Some examples add facts intentionally to show specificity: do not repeat those claims unless true.
 
-Go to https://github.com/Makrufkasr/test_app/actions → **Build Android APK** → select the successful workflow run → under **Artifacts**, download **English-Writing-Lab-debug-APK**, extract the resulting APK and install it on your Android device.
-
-If a workflow was not triggered automatically, use **Run workflow** on the Build Android APK workflow page.
-
-## Requirements
-
-GitHub Actions workflow installs Android SDK Platform 35 and uses Java 17 / Gradle 8.7. Local Android Studio builds need equivalent SDK tooling. The app bundles web assets offline. It relies on the device TTS voice package for pronunciation.
-
-**Build has not yet been run or tested on an Android device.**
+Android project root: place this folder contents at your GitHub repository root and commit/push.

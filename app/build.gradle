@@ -6,8 +6,8 @@ android {
         applicationId 'com.englishwritinglab.app'
         minSdk 24
         targetSdk 28
-        versionCode 1
-        versionName '2.5.0'
+        versionCode 31
+        versionName '3.1.0'
     }
     buildTypes { release { minifyEnabled false } }
     compileOptions {
